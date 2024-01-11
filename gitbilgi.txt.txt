@@ -1,0 +1,102 @@
+
+Git nedir 
+Bir versiyon kontrol sistemidir  git ve git hub farkli konular konsepti farkli
+Git bir versiyon kontrol sistemidir pc oyunlarindaki checkpoint kontrol noktalari olusturur ve yazlim yada harhangibir urunu gelistirirken checkpoind noktasi olusturmak icin kullanilir.
+
+Nasil ortaya cikti?
+Linux kurucusu linus torvalds tarafindan ihtiyaca donuk acik kaynak olarak kuruldu ve endusturu standardi haline geldi baska versyon sistemleri de mevcut
+
+Github nedir?
+Github bir portal repolarimizi  sakladigimiz birbirimizle payasabildigimiz bir portal 
+Temel Git terimleri ve komutları
+
+
+
+Repository Proje dosyalarını uzak bir sunucuda depolar. Genel kullanımda “Repo” olarak da kısaltılır.
+Branch Projenin bir çok bölümünü derli toplu şekilde tutulmasını sağlar. Branchin avantajı ana branchteki(master) geliştirme yapısını etkilemeden projeyi diğer oluşturduğumuz branchler üzerinden yönetebiliriz.
+Master Reponun ana branchidir. Git üzerinde hiç bir işlem yapmazsak değişikler master branchi üzerinden devam eder.
+Commit Proje dosyalarınızda belli bir değişiklik yaptığınızda o değişikliğin anlık görüntüsünün alınıp kaydedilmesine denir.
+Checkout Mevcut branch üzerindeki commit’lerin üzerinde geçiş yapabilmemizi sağlar.
+Fork Repository’nin bir kopyasının alınmasıdır. Temel anlamda forkun kullanım amacı alınan bu kopya üzerinde değişiklikler yaptıktan sonra projenin ana reposuna gönderilerek projenin gelişmesine katkı sağlamaktır.
+Pull Request (PR): Fork edilen proje üzerinde değişiklikler yaptıktan sonra gerçek repository’e gönderilerek o projenin sahibi olan geliştiricinin değerlendirmesine sunmaktır. Eğer PR kabul edilirse ana repository üzerinde, fork ettiğiniz proje üzerinde değişiklikler işlenir.
+Merge Branch üzerinde yaptığımız değişiklikleri master branch’i üzerinde birleştirme işlemidir.
+
+Şimdi ise komutlara göz atalım.
+
+Kullanici adi ve email tanimlama:
+Yeni bir kullanici olarak bir projeye dahil oldugumuzda yada birni projeye
+dahil etmek istedigimizde sisteme kulanici adi ve e-mail tanimlamamiz gerekir bunun icin
+git config --global user.name "emre cal"   kullanici adi ekleme
+git config --global user.name  sadece bunu yazarsak mevcut kullanici adini goruntuler
+git config --global user.email"emrecaltr@hotmail.com" kullanici mail ekleme
+git config --global user.email   kullanici mailini goruntuleme
+
+git (yardim dokumantasyonu)
+sadece git yazarsak mevcut tum kodlari getirir
+git  --version ise hangi git versionunun oldugunu 
+gosterir
+
+rm -rf ( klasor siler)
+rm ile dosyalari sileriz ancak klasorleri silemeyiz bunun icin rm -rf kodunu kullaniriz
+or.   rm - rf gitkursu
+
+
+rm  (remove - kaldir)
+belirtilen dosyayi siler or. rm ornek.txt
+
+Touch (dosya olustur)
+Bulundugumuz klasore herhangibir dosya olusturur or. 
+touch  ornek.txt 
+
+Mkdir   (make drectory - klasor olustur)
+Klasor olusturur or.  Mkdir gitkursu yazarsak gitkursu adinda 
+bir klasor olustururrz
+
+Clear (ekrani temizleme)
+Ekrani temizler karmasikligi giderir
+
+
+Cd   (change drector - klasor degistir)
+ gitmek istedigimiz klasore goturur  or cd Documents cd ..      Bir onceki klasore gel
+Klasor ismini yazdiktan sonra tab  a basarsan otomatik tamamlar
+
+
+Ls  list 
+İcerisinde bulundugumuz dosya ve klasorleri listele
+
+Pwd  (print working directory)
+Hangi klasorde oldugumuzu gosterir
+
+git config
+Kullanıcı adı, mail gibi ayarların belirleneceği komuttur. Örnek
+git config --global user.email sam@google.com
+
+git init
+Bu komut ile proje dizininizde GIT dizinini oluşturur. Bu dizinde projenizin repo adresi, projenin akışı, bilgileri gibi veriler bulunur.
+
+git add
+Verilen paremetrelere göre o dosyaları dizine ekler ve commit’lemeye hazır hale gelirler. “Git add .” komutu mevcut dizindeki tüm dosyaları dizine ekler. “Git add dosya.txt” komutu mevcut dizindeki “dosya.txt” dosyasını dizine ekler.
+git add dosya.txtgit add .
+
+git rm
+git add komutunun tersi olarak belirtiğiniz dosya veya dosyaları çalışma dizininden siler.
+git rm dosya.txt
+
+git commit
+git commit -m “ilk commit” komutu çalıştırdığımızda “ilk commit” başlığıyla o anki çalışma dizinindeki dosyaları .git içindeki özel bir bölüme(head) ekler.
+git commit –m “ilk commit”
+
+git status
+Proje dosyalarının o anki durumu hakkında bilgi verir. Durumu değiştirilmiş dosyaları gösterir.
+
+git remote
+“git remote -v” komutu ile projeye bağlanan uzak sunucuları listeler. Mevcut projeyi uzak sunucuya eklemek için ise “git remote add” komutunu çalıştırabiliriz.
+git remote add origin 
+Yukarıdaki komuttaki Github üzerinde belirttiğimiz repository’nin projeye eklemesini sağlarız.
+
+git push
+Commit’lediğimiz dosyaları uzak sunucudaki repository’e gönderir.
+git push origin master
+
+git pull
+Uzak sunucudaki proje dosyaları üzerindeki bir değişiklik veya ekleme varsa onları bizim localimizdeki proje dosyaları ile birleştirir.
