@@ -100,4 +100,46 @@ git push origin master
 
 git pull
 Uzak sunucudaki proje dosyaları üzerindeki bir değişiklik veya ekleme varsa onları bizim localimizdeki proje dosyaları ile birleştirir.
-wewewee
+
+ git commit -a
+ bir doyayi commit ettik ve uzerinde bir sure sonra degisiklik yaptigimizda
+git status ile kontrol edersek modifieted ifadesini goruruz degistirilmis
+anlamini tasir o ana kadar ki duzenlmeleri git e yuklemis olmasina 
+ragmen son degisikligi guncellemedigi anlamina gelir tekrar git add yaparak da
+guncelleyebiliriz ancal bunun yerine git commit -a yaparsak herseyi direk ekler
+ve icerisine alip commit yapar
+yada git add .  yaparsak ne var ne yok ekler
+
+git commit -m
+yapilan degisiklere aciklama eklemek yani aciklama commiti eklemek icin kullanilir
+
+git add .
+yapilan tum degisiklikleri ve herseyi yukler
+
+gitignore (gormezden gelmek)
+Toplu bir git add yapmak istedigimizi varsayalim bu durumda tum dosyalar sisteme
+yuklenecektir icerisinde yuklenmesini istemedigimiz dosyalar varsa 
+bunun icin calisma klasoru icerisinde .gitignore adinda dosya olusturmamiz gerek 
+ve bu dosyanin icine gizli kalmasini istedigimiz dosyalari belirtiyoruzq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
