@@ -100,3 +100,4 @@ git push origin master
 
 git pull
 Uzak sunucudaki proje dosyaları üzerindeki bir değişiklik veya ekleme varsa onları bizim localimizdeki proje dosyaları ile birleştirir.
+wewewee
