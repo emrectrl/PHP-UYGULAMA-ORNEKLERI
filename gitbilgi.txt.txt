@@ -112,6 +112,8 @@ yada git add .  yaparsak ne var ne yok ekler
 
 git commit -m
 yapilan degisiklere aciklama eklemek yani aciklama commiti eklemek icin kullanilir
+or. git commit -m "degisiklikler yapildi"
+
 
 git add .
 yapilan tum degisiklikleri ve herseyi yukler
@@ -121,6 +123,304 @@ Toplu bir git add yapmak istedigimizi varsayalim bu durumda tum dosyalar sisteme
 yuklenecektir icerisinde yuklenmesini istemedigimiz dosyalar varsa 
 bunun icin calisma klasoru icerisinde .gitignore adinda dosya olusturmamiz gerek 
 ve bu dosyanin icine gizli kalmasini istedigimiz dosyalari belirtiyoruzq
+
+git commit
+
+yapilan degisiklikleri kaydetmek icin git commit yazarsak default ide acilir ve bizden bir
+aciklama satiri girmemizi ister cunku git de aciklama satiri comit yaparken mecburi
+
+
+
+head-master 
+bir grup yazilimci ile calisirken  her bir yazilimci kendine ozgu branch acarak 
+ilgili bolumu gelistirir ve bu gelistirmeler gunun sonunda ana branch a yani
+master a aktarilir basindaki head son commitimizin pozisyonunu gosterir 
+
+
+git branch
+
+ ornegin git branch feat   gibi bir branch acarsak bizim icin yeni bir
+branch olusturur  ve head-feat  a gececektir sadece git branch yazmamiz durumunda
+mevcut branchleri gosterecektir
+
+git merge
+
+farkli branch lere ayrilmis projemizi birlestirmek icin kullanilir or .  git merge feat
+
+git switch
+mevcut branchler arasinda gecis yapmak icin kullanilir 
+or.  git switch reso
+
+
+
+
+fast forwarding
+diyelimki  calisilan projede belirli bir ilerlemeyi main branch i riske atmamak icin 
+yeni bir branch olusturup orada degisiklikler yapildi ve bu durumda herhangibir cakisma
+olmazsasa aslinda main branch de de yapilirmis gerek yokmus yeni bir branch a dedigimiz
+noktada yapilan isleme fast forwarding denir
+
+
+merge conflict
+buyuk bir ekiple calisirken ekip uyeleri farkli branch larde 
+cakismaya sebep olabilecek silme ve guncelleme islemleri 
+yapmis olabilir bu durmda sadece birini birakarak yada conflict leri 
+cozerek merge edilebilir aksi taktirde hata verir
+
+
+git restore
+belirli durumlarda yapilan degisiklikleri geri almamiz gerekebilir
+boyle durumlarda or.   git restore ornek.txt  dersek
+son yapilan commite  donmus olur
+
+git stash
+bilgileri al sakla biryerde ben istersem ulasayim 
+git kendi icerisinde ozel biryerde saklar ve commit etmedigimiz
+halde yaptigimiz degisiklikleri  kayit altina almamizi ve sonra
+tekrar ulasabilmemizi saglar argo tabirle zulalar  or.  git stash
+yazarsak bir id numarasi ile saklar 
+geri getirmek icin  git stash pop  kullaniriz  git stash list dersek sakladiklarimizin listesini verir
+git stash apply     stash@{0}    gibi id numarasini belirtirsek istedigimiz yere istedigimiz stash i ekler
+
+git stash clear  butun stash listesini temizler 
+
+ sadece git stahs apply yaparsak mevcut stash i ekler ancak hafizadan kaldirmaz baska bir yerde  kullanmak uzere saklamaya devam eder
+
+
+checkout
+commit atmadan once git restore ile en con commite doner peki comit attiktan sonra?
+belirli commit lerden sonra  geri donmek icin once git log yazariz ve sonrasinda gitmek 
+istedigimiz log un hash ini  or.   git checkout ba............23    seklinde sonuna id numarasini
+yazarak geriye gidebiliriz  head bir onceki commite gelse bile master eskide kaldigi icin 
+
+reset vs revert
+
+git reset  b133......dewdede     sonuna id  numarasini yazarak sonrasindaki branchleri siler
+
+git revert 8b....33433443  sonuna id numarasini yazarsak  istedigimiz commit e gider ancak 
+yeni bir commit olusturarak devam eder ancal silinmez log tutmaya devam eder
+
+
+
+git diff
+
+commitler branclar arasinda yapilan degisiklikler sonucunda ne farklar olugunu
+gormek icin kullanilir yapilan eylemlerin sonucunda olusan farkliliklari getirr
+
+or.   git diff yazdiktan sonra head yazip son commitimiz uzerindeki degisiklikleri gorebiliriz
+
+yada  iki commitin idisini yazarak iki commit arasindaki farkliliklari gorururz sorun cikarirsa
+arasina iki nokta koy
+
+
+rebase  (bazi degistirme)
+belili bir zaman icerisinde farkli peryotlarla yapilmis farkli branchlerdeki degisikleri 
+belirli bir hizaya sokmak istedigimizde kullanilir ancak zaman akisini degistirecegi icin 
+risklidir asla kullanmamamiz gereken konu belirli bir yere kadar proje gelmis ve projede calisan
+baska kisiler de  projeye katkida bulunduysa budurumda rebase yapilirsa herezin calismasini
+dagitabilir kimseyle paylasilmamis ise son haline getirmek icin rebase kullanilabilir
+or. git rebase master
+
+
+
+GITHUB PAYLASIMI
+calistiriyoruz
+git remote add origin git@github.com:emrectrl/PHP-UYGULAMA-ORNEKLERI.git   
+git branch -m main
+git push -u origin main       icerisinde bulundugumuz guncel commitleri origine yollar
+
+git  clone 
+git  clone git@github.com:emrectrl/PHP-UYGULAMA-ORNEKLERI.git  
+git hub daki dosyalari bilgisayara indirir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
