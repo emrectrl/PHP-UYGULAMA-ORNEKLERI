@@ -70,7 +70,6 @@ $anketsorgusu = $veritabanibaglantisi->prepare("SELECT * FROM anket LIMIT 1") ; 
 
 
 
-
 ?>
 
 
